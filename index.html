@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tic-Tac-Toe</title>
+
+    <!-- Bootstrap (CDN for simplicity; no build tools required) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-light">
+    <main class="container py-4">
+      <!-- Header / Turn indicator -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h3 m-0">Tic‑Tac‑Toe</h1>
+        <span id="turnBadge" class="badge text-bg-primary">X’s Turn</span>
+      </div>
+
+      <!-- Alert container (winner/draw messages get injected here) -->
+      <div id="alertContainer" class="mb-3" aria-live="assertive" aria-atomic="true"></div>
+
+      <!-- Board -->
+      <div id="board" class="ttt-grid" role="grid" aria-label="Tic-Tac-Toe Board">
+        <!-- 9 cells (buttons for accessibility / keyboard) -->
+        <!-- data-index lets JS know which spot was clicked -->
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 1" data-index="0"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 2" data-index="1"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 3" data-index="2"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 4" data-index="3"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 5" data-index="4"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 6" data-index="5"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 7" data-index="6"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 8" data-index="7"></button>
+        <button class="ttt-cell btn btn-outline-secondary"
+                role="gridcell" aria-label="Cell 9" data-index="8"></button>
+      </div>
+
+      <!-- Controls -->
+      <div class="d-flex gap-2 mt-3">
+        <button id="restartBtn" class="btn btn-primary">Restart</button>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
